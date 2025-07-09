@@ -1,0 +1,17 @@
+---
+// Layout base para páginas
+const { children } = Astro.props;
+import '../styles/global.css';
+---
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{import.meta.env.PUBLIC_SITE_TITLE || 'D&L Assistência Técnica'}</title>
+    <meta name="description" content="Assistência técnica especializada em Campo Grande, MS. Conserto de eletrônicos, eletrodomésticos e mais." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body class="bg-gray-50 text-gray-900 min-h-screen flex flex-col">
+    <slot />
+  </body>
+</html>

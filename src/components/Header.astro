@@ -1,0 +1,15 @@
+---
+import { STORE_NAME, INSTAGRAM_LINK, FACEBOOK_LINK, CATALOG_LINK } from '../utils/constants';
+---
+<header class="w-full bg-white shadow-md sticky top-0 z-50">
+  <div class="container mx-auto flex items-center justify-between py-4 px-4 md:px-0">
+    <div class="flex items-center gap-2">
+      <span class="text-2xl font-bold tracking-tight text-blue-700">{STORE_NAME}</span>
+    </div>
+    <nav class="flex items-center gap-4">
+      <a href={CATALOG_LINK} target="_blank" aria-label="WhatsApp" class="hover:text-green-500 transition-colors text-2xl">WhatsApp</a>
+      <a href={INSTAGRAM_LINK} target="_blank" aria-label="Instagram" class="hover:text-pink-500 transition-colors text-2xl">Instagram</a>
+      <a href={FACEBOOK_LINK} target="_blank" aria-label="Facebook" class="hover:text-blue-700 transition-colors text-2xl">Facebook</a>
+    </nav>
+  </div>
+</header>
