@@ -1,5 +1,5 @@
 ---
-import { STORE_NAME, ADDRESS, CITY, INSTAGRAM_LINK, FACEBOOK_LINK } from '../utils/constants';
+import { STORE_NAME, ADDRESS, CITY, INSTAGRAM_LINK, FACEBOOK_LINK, CATALOG_LINK } from '../utils/constants';
 ---
 <footer class="w-full bg-gray-900 text-gray-100 mt-auto">
   <div class="container mx-auto flex flex-col md:flex-row items-center justify-between py-6 px-4 md:px-0">
@@ -7,9 +7,19 @@ import { STORE_NAME, ADDRESS, CITY, INSTAGRAM_LINK, FACEBOOK_LINK } from '../uti
       <span class="font-semibold">{STORE_NAME}</span> <br />
       <span>{ADDRESS} - {CITY}</span>
     </div>
-    <div class="flex gap-4 mt-2 md:mt-0">
-      <a href={INSTAGRAM_LINK} target="_blank" aria-label="Instagram" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
-      <a href={FACEBOOK_LINK} target="_blank" aria-label="Facebook" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-facebook"></i></a>
+    <div class="flex flex-col items-end gap-2 mt-4 md:mt-0">
+      <span class="font-semibold text-sm text-gray-300">Contatos</span>
+      <div class="flex gap-4 mt-1">
+        <a href={CATALOG_LINK} target="_blank" aria-label="WhatsApp" class="hover:opacity-80 transition-opacity">
+          <img src="/whatssapp.svg" alt="WhatsApp" class="w-7 h-7" />
+        </a>
+        <a href={INSTAGRAM_LINK} target="_blank" aria-label="Instagram" class="hover:opacity-80 transition-opacity">
+          <img src="/instagram.svg" alt="Instagram" class="w-7 h-7" />
+        </a>
+        <a href={FACEBOOK_LINK} target="_blank" aria-label="Facebook" class="hover:opacity-80 transition-opacity">
+          <img src="/facebook.svg" alt="Facebook" class="w-7 h-7" />
+        </a>
+      </div>
     </div>
   </div>
   <div class="text-center text-xs text-gray-400 pb-2">&copy; {new Date().getFullYear()} {STORE_NAME}. Todos os direitos reservados.</div>

@@ -1,0 +1,19 @@
+---
+interface Servico {
+  imagem: string;
+  texto: string;
+}
+
+interface CardServicoProps {
+  servico: Servico;
+}
+
+const { servico } = Astro.props as CardServicoProps;
+const { imagem, texto } = servico;
+---
+<div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col items-center transition-transform hover:-translate-y-2 hover:shadow-2xl duration-300">
+  <img src={imagem} alt={texto} class="w-full h-40 object-cover" loading="lazy" />
+  <div class="p-4 w-full flex flex-col items-center">
+    <p class="text-base md:text-lg font-semibold text-gray-800 text-center mt-2">{texto}</p>
+  </div>
+</div>

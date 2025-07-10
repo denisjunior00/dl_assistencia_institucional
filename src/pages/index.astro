@@ -3,12 +3,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import Footer from '../components/Footer.astro';
+import ListagemServicos from '../components/ListagemServicos.astro';
 ---
 <BaseLayout>
   <Header />
   <main class="flex-1">
     <Hero />
-    {/* Adicione aqui mais seções como Serviços, Sobre, Contato, etc. */}
+    <section class="py-16 px-4 max-w-7xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-10 text-blue-700">Nossos Serviços</h2>
+      <ListagemServicos servicos={[
+        { imagem: '/facebook.svg', texto: 'Instalação e manutenção de câmeras de segurança: Proteja seu patrimônio com sistemas modernos de monitoramento, instalação profissional e suporte técnico especializado para residências e empresas.' },
+        { imagem: '/facebook.svg', texto: 'Instalação e manutenção de câmeras de segurança: Proteja seu patrimônio com sistemas modernos de monitoramento, instalação profissional e suporte técnico especializado para residências e empresas.' },
+        { imagem: '/facebook.svg', texto: 'Instalação e manutenção de câmeras de segurança: Proteja seu patrimônio com sistemas modernos de monitoramento, instalação profissional e suporte técnico especializado para residências e empresas.' },
+        { imagem: '/facebook.svg', texto: 'Instalação e manutenção de câmeras de segurança: Proteja seu patrimônio com sistemas modernos de monitoramento, instalação profissional e suporte técnico especializado para residências e empresas.' },
+      ]} />
+    </section>
   </main>
   <Footer />
 </BaseLayout>

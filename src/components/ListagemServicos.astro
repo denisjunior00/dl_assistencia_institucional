@@ -1,0 +1,15 @@
+---
+import CardServico from './CardServico.astro';
+
+interface Servico {
+  imagem: string;
+  texto: string;
+}
+
+const { servicos } = Astro.props as { servicos: Servico[] };
+---
+<div class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+  {servicos.map(servico => (
+    <CardServico servico={servico} />
+  ))}
+</div>

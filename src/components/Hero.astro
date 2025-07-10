@@ -1,12 +1,18 @@
 ---
-import { STORE_NAME, CATALOG_LINK, INSTAGRAM_LINK, FACEBOOK_LINK } from '../utils/constants';
+import { STORE_NAME, CATALOG_LINK, CONTACT_PHONE } from '../utils/constants';
 ---
 <section class="w-full bg-gradient-to-br from-blue-700 to-blue-400 text-white py-16 px-4 flex flex-col items-center text-center">
   <h1 class="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow-lg">{STORE_NAME}</h1>
   <p class="text-lg md:text-xl mb-6 max-w-2xl">Especialistas em assistência técnica de eletrônicos e eletrodomésticos em Campo Grande, MS. Atendimento rápido, confiável e com garantia.</p>
-  <div class="flex flex-row gap-6 justify-center text-2xl">
-    <a href={CATALOG_LINK} target="_blank" aria-label="WhatsApp" class="hover:text-green-400 transition-colors">WhatsApp</a>
-    <a href={INSTAGRAM_LINK} target="_blank" aria-label="Instagram" class="hover:text-pink-400 transition-colors">Instagram</a>
-    <a href={FACEBOOK_LINK} target="_blank" aria-label="Facebook" class="hover:text-blue-200 transition-colors">Facebook</a>
+  <div class="flex flex-col md:flex-row gap-4 justify-center">
+    <a href={CATALOG_LINK} target="_blank" class="px-8 py-3 bg-white text-blue-700 font-bold rounded shadow hover:bg-blue-100 transition-colors text-lg">
+      Ver produtos
+    </a>
+    <a href={`tel:${CONTACT_PHONE}`} class="px-8 py-3 bg-blue-900 text-white font-bold rounded shadow hover:bg-blue-800 transition-colors text-lg flex items-center gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-7 h-7">
+        <path d="M2.25 6.75A2.25 2.25 0 0 1 4.5 4.5h2.086a1.5 1.5 0 0 1 1.06.44l2.02 2.02a1.5 1.5 0 0 1 .44 1.06v2.09a.75.75 0 0 1-.75.75H7.5a.75.75 0 0 0-.75.75v2.25c0 .414.336.75.75.75h2.25a.75.75 0 0 1 .75.75v2.09a1.5 1.5 0 0 1-.44 1.06l-2.02 2.02a1.5 1.5 0 0 1-1.06.44H4.5A2.25 2.25 0 0 1 2.25 17.25v-10.5Zm15.75 0A2.25 2.25 0 0 1 20.25 4.5h.75A2.25 2.25 0 0 1 23.25 6.75v10.5A2.25 2.25 0 0 1 21 19.5h-.75A2.25 2.25 0 0 1 18 17.25v-10.5Z" />
+      </svg>
+      Fale Conosco
+    </a>
   </div>
 </section>
