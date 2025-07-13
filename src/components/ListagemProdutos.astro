@@ -9,6 +9,6 @@ import CardProduto from './CardProduto.astro';
 ---
 <div class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
   {produtos.map(produto => (
-    <CardProduto imagem={produto.imagem} titulo={produto.titulo} itens={produto.itens} />
+    <CardProduto imagem={produto.imagem} titulo={produto.titulo} descricao="Este é um texto de exemplo para a descrição do produto. Aqui você pode destacar os principais benefícios ou informações do item." itens={produto.itens} />
   ))}
 </div>

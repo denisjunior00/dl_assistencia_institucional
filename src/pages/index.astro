@@ -10,6 +10,15 @@ import ListagemProdutos from '../components/ListagemProdutos.astro';
   <Header />
   <main class="flex-1">
     <Hero />
+    <section class="pt-10 px-4 max-w-4xl mx-auto">
+      <div class="bg-white bg-opacity-80 rounded-2xl shadow-2xl p-8 flex flex-col items-center justify-center backdrop-blur-md border border-gray-200 animate-fade-in">
+        <h2 class="text-4xl font-extrabold text-blue-700 text-center mb-4 drop-shadow-lg">Sobre nós</h2>
+        <div class="w-16 h-1 bg-gradient-to-r from-blue-700 via-blue-400 to-blue-300 rounded-full mb-6"></div>
+        <p class="text-lg text-gray-700 text-center max-w-2xl mx-auto mb-6">
+          A D&L Assistência Técnica é referência em soluções de segurança eletrônica e assistência técnica em Campo Grande, MS. Com equipe especializada, atendimento personalizado e tecnologia de ponta, garantimos confiança, agilidade e satisfação para residências e empresas. Nosso compromisso é proteger seu patrimônio e oferecer suporte completo, sempre com transparência e excelência.
+        </p>
+      </div>
+    </section>
     <section class="py-10 px-4 max-w-7xl mx-auto">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 border-b border-gray-200 pb-6">
         <div class="flex flex-col items-center">
@@ -32,21 +41,28 @@ import ListagemProdutos from '../components/ListagemProdutos.astro';
       <h2 class="text-3xl font-bold text-center mb-2 text-blue-700">Nossos Serviços</h2>
       <p class="text-center text-lg text-gray-600 mb-10 max-w-2xl mx-auto">Oferecemos soluções completas em segurança eletrônica com tecnologia de ponta e atendimento personalizado.</p>
       <ListagemServicos servicos={[
-        { imagem: '/facebook.svg', texto: 'Instalação e manutenção de câmeras de segurança: Proteja seu patrimônio com sistemas modernos de monitoramento, instalação profissional e suporte técnico especializado para residências e empresas.' },
-        { imagem: '/facebook.svg', texto: 'Instalação e manutenção de câmeras de segurança: Proteja seu patrimônio com sistemas modernos de monitoramento, instalação profissional e suporte técnico especializado para residências e empresas.' },
-        { imagem: '/facebook.svg', texto: 'Instalação e manutenção de câmeras de segurança: Proteja seu patrimônio com sistemas modernos de monitoramento, instalação profissional e suporte técnico especializado para residências e empresas.' },
-        { imagem: '/facebook.svg', texto: 'Instalação e manutenção de câmeras de segurança: Proteja seu patrimônio com sistemas modernos de monitoramento, instalação profissional e suporte técnico especializado para residências e empresas.' },
+        { imagem: '/cam3.svg', texto: 'Instalação e manutenção de câmeras de segurança: Proteja seu patrimônio com sistemas modernos de monitoramento, instalação profissional e suporte técnico especializado para residências e empresas.' },
+        { imagem: '/cam3.svg', texto: 'Instalação e manutenção de câmeras de segurança: Proteja seu patrimônio com sistemas modernos de monitoramento, instalação profissional e suporte técnico especializado para residências e empresas.' },
+        { imagem: '/maoCel.svg', texto: 'Instalação e manutenção de câmeras de segurança: Proteja seu patrimônio com sistemas modernos de monitoramento, instalação profissional e suporte técnico especializado para residências e empresas.' },
+        { imagem: '/maoCel.svg', texto: 'Instalação e manutenção de câmeras de segurança: Proteja seu patrimônio com sistemas modernos de monitoramento, instalação profissional e suporte técnico especializado para residências e empresas.' },
       ]} />
     </section>
     <section class="py-10 px-4 max-w-7xl mx-auto">
       <h2 class="text-3xl font-bold text-center mb-2 text-blue-700">Categorias</h2>
       <p class="text-center text-lg text-gray-600 mb-10 max-w-2xl mx-auto">Soluções completas para sua segurança</p>
       <ListagemProdutos produtos={[
-        { imagem: '/facebook.svg', titulo: 'Kit Câmeras HD', itens: ['4 câmeras HD', 'DVR 4 canais', 'Acesso remoto', 'Instalação inclusa'] },
-        { imagem: '/facebook.svg', titulo: 'Alarme Inteligente', itens: ['Sensor de movimento', 'Controle via app', 'Sirene potente', 'Instalação inclusa'] },
-        { imagem: '/facebook.svg', titulo: 'Fechadura Digital', itens: ['Senha personalizada', 'Cartão de acesso','Instalação inclusa', 'Instalação inclusa'] },
-        { imagem: '/facebook.svg', titulo: 'Fechadura Digital', itens: ['Senha personalizada', 'Cartão de acesso', 'Instalação inclusa', 'Instalação inclusa'] }
+        { imagem: '/imagens/fotoExemplo.jpg', titulo: 'Kit Câmeras HD', itens: ['4 câmeras HD', 'DVR 4 canais', 'Acesso remoto', 'Instalação inclusa'] },
+        { imagem: '/imagens/fotoExemplo.jpg', titulo: 'Alarme Inteligente', itens: ['Sensor de movimento', 'Controle via app', 'Sirene potente', 'Instalação inclusa'] },
+        { imagem: '/imagens/fotoExemplo.jpg', titulo: 'Fechadura Digital', itens: ['Senha personalizada', 'Cartão de acesso','Instalação inclusa', 'Instalação inclusa'] },
+        { imagem: '/imagens/fotoExemplo.jpg', titulo: 'Fechadura Digital', itens: ['Senha personalizada', 'Cartão de acesso', 'Instalação inclusa', 'Instalação inclusa'] }
       ]} />
+    </section>
+    <section class="w-full bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 text-white py-10 px-4 flex flex-col items-center text-center mt-0">
+      <h2 class="text-3xl font-bold mb-4">Fale com a D&L Assistência Técnica</h2>
+      <p class="text-lg mb-6 max-w-xl">Precisa de suporte, orçamento ou quer tirar dúvidas? Nossa equipe está pronta para te atender com agilidade e atenção personalizada. Entre em contato agora mesmo!</p>
+      <a href="https://wa.me/5567981267455" target="_blank" class="px-8 py-3 bg-green-600 text-white font-bold rounded shadow hover:bg-green-700 transition-transform transform hover:scale-105 text-lg flex items-center gap-2">
+        Falar pelo WhatsApp
+      </a>
     </section>
   </main>
   <Footer />

@@ -10,6 +10,10 @@ const { servicos } = Astro.props as { servicos: Servico[] };
 ---
 <div class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
   {servicos.map(servico => (
-    <CardServico servico={servico} />
+    <CardServico servico={servico}>
+      <div class="flex justify-center items-center mb-4 bg-blue-700 rounded-full w-[70px] h-[70px]">
+        <img src={servico.imagem} alt="Ícone do serviço" class="w-[40px] h-[40px] object-contain text-white" style="filter: brightness(0) invert(1);" />
+      </div>
+    </CardServico>
   ))}
 </div>
