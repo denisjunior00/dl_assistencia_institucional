@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import Footer from '../components/Footer.astro';
 import ListagemServicos from '../components/ListagemServicos.astro';
+import ListagemProdutos from '../components/ListagemProdutos.astro';
 ---
 <BaseLayout>
   <Header />
@@ -28,13 +29,23 @@ import ListagemServicos from '../components/ListagemServicos.astro';
           <span class="text-base font-semibold text-gray-800">Satisfação do cliente</span>
         </div>
       </div>
-      <h2 class="text-3xl font-bold text-center mb-2 text-black-700">Nossos Serviços</h2>
+      <h2 class="text-3xl font-bold text-center mb-2 text-blue-700">Nossos Serviços</h2>
       <p class="text-center text-lg text-gray-600 mb-10 max-w-2xl mx-auto">Oferecemos soluções completas em segurança eletrônica com tecnologia de ponta e atendimento personalizado.</p>
       <ListagemServicos servicos={[
         { imagem: '/facebook.svg', texto: 'Instalação e manutenção de câmeras de segurança: Proteja seu patrimônio com sistemas modernos de monitoramento, instalação profissional e suporte técnico especializado para residências e empresas.' },
         { imagem: '/facebook.svg', texto: 'Instalação e manutenção de câmeras de segurança: Proteja seu patrimônio com sistemas modernos de monitoramento, instalação profissional e suporte técnico especializado para residências e empresas.' },
         { imagem: '/facebook.svg', texto: 'Instalação e manutenção de câmeras de segurança: Proteja seu patrimônio com sistemas modernos de monitoramento, instalação profissional e suporte técnico especializado para residências e empresas.' },
-        { imagem: '/facebook.svg', texto: 'Instalação e manutenção de câmeras de segurança: Proteja seu patrimônio com sistemas modernos de monitoramento, instalação profissional e suporte técnico especializado para residências e empresas.' }
+        { imagem: '/facebook.svg', texto: 'Instalação e manutenção de câmeras de segurança: Proteja seu patrimônio com sistemas modernos de monitoramento, instalação profissional e suporte técnico especializado para residências e empresas.' },
+      ]} />
+    </section>
+    <section class="py-10 px-4 max-w-7xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-2 text-blue-700">Categorias</h2>
+      <p class="text-center text-lg text-gray-600 mb-10 max-w-2xl mx-auto">Soluções completas para sua segurança</p>
+      <ListagemProdutos produtos={[
+        { imagem: '/facebook.svg', titulo: 'Kit Câmeras HD', itens: ['4 câmeras HD', 'DVR 4 canais', 'Acesso remoto', 'Instalação inclusa'] },
+        { imagem: '/facebook.svg', titulo: 'Alarme Inteligente', itens: ['Sensor de movimento', 'Controle via app', 'Sirene potente', 'Instalação inclusa'] },
+        { imagem: '/facebook.svg', titulo: 'Fechadura Digital', itens: ['Senha personalizada', 'Cartão de acesso','Instalação inclusa', 'Instalação inclusa'] },
+        { imagem: '/facebook.svg', titulo: 'Fechadura Digital', itens: ['Senha personalizada', 'Cartão de acesso', 'Instalação inclusa', 'Instalação inclusa'] }
       ]} />
     </section>
   </main>

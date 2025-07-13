@@ -1,0 +1,14 @@
+---
+interface Produto {
+  imagem: string;
+  titulo: string;
+  itens: string[];
+}
+const { produtos } = Astro.props as { produtos: Produto[] };
+import CardProduto from './CardProduto.astro';
+---
+<div class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
+  {produtos.map(produto => (
+    <CardProduto imagem={produto.imagem} titulo={produto.titulo} itens={produto.itens} />
+  ))}
+</div>
