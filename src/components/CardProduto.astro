@@ -1,5 +1,5 @@
 ---
-import { CATALOG_LINK } from '../utils/constants';
+import { WHATSAPP_LINK, CATALOG_LINK } from '../utils/constants';
 interface CardProdutoProps {
   imagem: string;
   titulo: string;
@@ -9,8 +9,10 @@ interface CardProdutoProps {
 const { imagem, titulo, descricao, itens } = Astro.props as CardProdutoProps;
 ---
 <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col items-center transition-transform hover:-translate-y-2 hover:shadow-2xl duration-300 w-full max-w-xs mx-auto">
-  <img src={imagem} alt={titulo} class="w-full h-40 object-cover" loading="lazy" />
-  <div class="p-4 w-full flex flex-col items-center">
+  <div class="w-[90px] h-[90px] md:w-[110px] md:h-[110px] flex items-center justify-center">
+    <img src={imagem} alt={titulo} class="w-full h-full object-cover rounded-lg" loading="lazy" />
+  </div>
+  <div class="px-4 pb-4 w-full flex flex-col items-center">
     <h3 class="text-lg md:text-xl font-bold text-blue-700 text-center mb-2">{titulo}</h3>
     {descricao && (
       <p class="text-gray-600 text-sm md:text-base text-start mb-2">{descricao}</p>

@@ -11,9 +11,9 @@ interface CardServicoProps {
 const { servico } = Astro.props as CardServicoProps;
 const { imagem, texto } = servico;
 ---
-<div class="bg-white rounded-2xl shadow-xl flex flex-col items-center transition-transform hover:-translate-y-2 hover:shadow-2xl duration-300 border border-gray-100">
-  <div class="bg-gradient-to-tr from-blue-900 via-blue-700 to-blue-500 rounded-full w-[100px] h-[100px] flex items-center justify-center mt-6 shadow-lg">
-    <img src={imagem} alt={texto} class="w-[60px] h-[60px] object-contain drop-shadow-lg" loading="lazy" />
+<div class="bg-white rounded-2xl shadow-xl flex flex-col items-center transition-transform hover:-translate-y-2 hover:shadow-2xl duration-300 border border-gray-100 w-full max-w-xs mx-auto">
+  <div class="flex items-center justify-center mt-6">
+    <img src={imagem} alt={texto} class="w-[90px] h-[90px] object-cover rounded-lg md:w-[110px] md:h-[110px]" loading="lazy" />
   </div>
   <div class="px-6 py-4 w-full flex flex-col items-center">
     <p class="text-base md:text-lg font-semibold text-gray-800 text-center mt-4 mb-2 leading-relaxed">
